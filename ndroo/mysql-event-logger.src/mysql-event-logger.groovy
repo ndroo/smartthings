@@ -121,7 +121,6 @@ def genericHandler(evt) {
 		json += "\"source\":\"${evt.source}\","
 		json += "\"program\":\"SmartThings\""
 		json += "}"
-		log.debug("JSON: ${json}")
 
 		def params = [
 		uri: "http://${rest_url}?key=${rest_key}",
