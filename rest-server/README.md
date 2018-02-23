@@ -1,4 +1,4 @@
-#Instructions
+# Instructions
 
 1) This assumes you're running a fresh install of Ubuntu 16, so set up an Ubuntu 16 server (or equiv)
 2) You need a MySQL server. I personally have a Amazon Aurora instance for this purpose, but you could also run it on the same server as you're hosting this code. Once the instance is created, run the migrate.sql file on it to create the database and required table structure.
