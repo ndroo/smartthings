@@ -37,6 +37,9 @@ preferences {
 	section("Log these indicators:") {
 		input "indicators", "capability.indicator", multiple: true, required: false
 	}
+	section("Log these valves:") {
+		input "valves", "capability.valve", multiple: true, required: false
+	}
 	section("Log these CO detectors:") {
 		input "codetectors", "capability.carbonMonoxideDetector", multiple: true, required: false
 	}
@@ -82,6 +85,7 @@ def initialize() {
 def doSubscriptions() {
 	subscribe(alarms,			"alarm",					genericHandler)
 		subscribe(codetectors,		"carbonMonoxideDetector",	genericHandler)
+		subscribe(valves,		"valve",	genericHandler)
 		subscribe(contacts,			"contact",      			genericHandler)
 		subscribe(indicators,		"indicator",    			genericHandler)
 		subscribe(modes,			"locationMode", 			genericHandler)
