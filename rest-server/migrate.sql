@@ -11,3 +11,5 @@ CREATE TABLE `sensors` (
   KEY `timestamp` (`timestamp`,`type`,`id`),
   KEY `id` (`id`,`timestamp`,`type`)
 ) ENGINE=InnoDB;
+CREATE TABLE `battery_sensors` (
+  `id` varchar(255) DEFAULT NULL ) ENGINE=InnoDB;
